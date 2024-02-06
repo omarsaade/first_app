@@ -4,3 +4,7 @@ ctrl + shift + p on windows = > open Command Palette
 // bel main.dart , fi run fo2 el void , kbesa bya3mul run... 
 // or  ktob     flutter run bel terminal
 // aw bem menu bar fo2=> ruh 3al Run w baada run without debbuging
+
+to create a flutter project : flutter create first_app
+
+flutter devices

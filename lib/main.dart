@@ -2,8 +2,16 @@
 
 import 'package:flutter/material.dart';
 
+// MaterialApp,Scaffold,Color,Center...hol widget
 void main() {
-  runApp(MaterialApp(
-    home: Text('Hello world! '),
-  ));
+  runApp(
+    const MaterialApp(
+      home: Scaffold(
+        backgroundColor: Color.fromARGB(255, 121, 52, 241),
+        body: Center(
+          child: Text('Hello World!'),
+        ),
+      ),
+    ),
+  );
 }

@@ -19,3 +19,33 @@ void main() {
     home: Text('Hello world! '),
   ));
 }
+
+
+
+void main() {
+  runApp(MaterialApp(
+    home: Text('Hello world!'),
+  ));
+}
+This is the entry point of the Flutter application. The main() function is the starting point of any Dart program. Inside main(), runApp() is called, which is a function provided by Flutter to run the application. It takes a widget as an argument, typically the root widget of your application.
+
+In this case, the root widget is MaterialApp, which sets up the basic Material Design visual layout structure of the app. The home parameter of MaterialApp is set to a Text widget with the text 'Hello world!', which means the application will display a screen with the text 'Hello world!' when launched.
+
+
+
+
+// ignore_for_file: prefer_const_constructors
+
+import 'package:flutter/material.dart';
+
+void main() {
+  // usage of const is important cz it save time and memory when u reuse the MaterialApp for the second time...it can be used in any widget ,dart will tells you where to use it
+  runApp(const MaterialApp(
+    home: Text('Hello world!'),
+  ));
+}
+
+
+
+
+understanding types 

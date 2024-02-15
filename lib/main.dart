@@ -1,6 +1,9 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 void main() {
-  // MaterialApp hye el widget name
-  runApp(MaterialApp());
+  runApp(MaterialApp(
+    home: Text('Hello world! '),
+  ));
 }

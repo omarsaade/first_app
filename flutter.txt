@@ -8,3 +8,14 @@ ctrl + shift + p on windows = > open Command Palette
 to create a flutter project : flutter create first_app
 
 flutter devices
+
+
+import 'package:flutter/material.dart';
+
+void main() {
+  // MaterialApp hye el widget name
+  runApp(MaterialApp(
+    // text bte5od named parameter
+    home: Text('Hello world! '),
+  ));
+}

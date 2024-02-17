@@ -1,6 +1,8 @@
 import 'package:first_app/styled_text.dart';
 import 'package:flutter/material.dart';
 
+// var middleAlignment; // he el type taba3a huwe dynamic w he ma sah na3mla hik
+// Alignment? middleAlignment; // fina hik iza badak
 var startAlignment = Alignment.topLeft;
 var endAlignment = Alignment.bottomRight;
 
@@ -13,6 +15,7 @@ class GradientContainer extends StatelessWidget {
 
   @override
   Widget build(context) {
+    // middleAlignment = Alignment.bottomLeft;
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(

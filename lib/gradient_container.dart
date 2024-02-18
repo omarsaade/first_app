@@ -1,4 +1,4 @@
-import 'package:first_app/styled_text.dart';
+// import 'package:first_app/styled_text.dart';
 import 'package:flutter/material.dart';
 
 var startAlignment = Alignment.topLeft;
@@ -7,10 +7,15 @@ var endAlignment = Alignment.bottomRight;
 const middleAlignment = Alignment.centerLeft;
 
 class GradientContainer extends StatelessWidget {
+  // you can simply added it multiple constructor to the same class
   const GradientContainer(this.color1, this.color2, {super.key});
 
   final Color color1;
   final Color color2;
+
+  void rollDice() {
+    // ...
+  }
 
   @override
   Widget build(context) {
@@ -24,9 +29,18 @@ class GradientContainer extends StatelessWidget {
         ),
       ),
       child: Center(
-        child: Image.asset(
-          'assets/images/dice-2.png',
-          width: 200,
+        child: Column(
+          children: [
+            Image.asset(
+              'assets/images/dice-2.png',
+              width: 300,
+              height: 200,
+            ),
+            TextButton(
+              onPressed: rollDice,
+              child: const Text('Roll Dice'),
+            ),
+          ],
         ),
       ),
     );

@@ -8,13 +8,17 @@ const middleAlignment = Alignment.centerLeft;
 
 class GradientContainer extends StatelessWidget {
   // you can simply added it multiple constructor to the same class
-  const GradientContainer(this.color1, this.color2, {super.key});
-
+  GradientContainer(this.color1, this.color2, {super.key});
+  GradientContainer.purple({super.key})
+      : color1 = Colors.deepPurple,
+        color2 = Colors.indigo;
   final Color color1;
   final Color color2;
+  var activeDiceImage = 'assets/images/dice-2.png';
 
   void rollDice() {
-    // ...
+    activeDiceImage = 'assets/images/dice-4.png';
+    print("Changing image");
   }
 
   @override
@@ -34,7 +38,7 @@ class GradientContainer extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Image.asset(
-              'assets/images/dice-2.png',
+              activeDiceImage,
               width: 300,
               height: 200,
             ),

@@ -6,12 +6,12 @@ import 'package:flutter/material.dart';
 // MaterialApp,Scaffold,Color,Center...hol widget
 void main() {
   runApp(
-    const MaterialApp(
+    MaterialApp(
       home: Scaffold(
         // backgroundColor: Color.fromARGB(255, 121, 52, 241),
         body: GradientContainer(
-          Color.fromARGB(255, 88, 14, 216),
-          Color.fromARGB(255, 105, 132, 61),
+          const Color.fromARGB(255, 88, 14, 216),
+          const Color.fromARGB(255, 105, 132, 61),
         ),
       ),
     ),

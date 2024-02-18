@@ -38,6 +38,7 @@ class GradientContainer extends StatelessWidget {
               width: 300,
               height: 200,
             ),
+            // he aternative lal padding
             const SizedBox(
               height: 20,
             ),
@@ -47,7 +48,7 @@ class GradientContainer extends StatelessWidget {
                 // padding: const EdgeInsets.only(
                 //   top: 20,
                 // ),
-                foregroundColor: Colors.white,
+                foregroundColor: Colors.red,
                 textStyle: const TextStyle(
                   fontSize: 28,
                 ),

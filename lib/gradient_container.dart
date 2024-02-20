@@ -1,25 +1,21 @@
 // import 'package:first_app/styled_text.dart';
+import 'package:first_app/dice_roller.dart';
 import 'package:flutter/material.dart';
 
 var startAlignment = Alignment.topLeft;
 var endAlignment = Alignment.bottomRight;
-
 const middleAlignment = Alignment.centerLeft;
 
 class GradientContainer extends StatelessWidget {
   // you can simply added it multiple constructor to the same class
-  GradientContainer(this.color1, this.color2, {super.key});
-  GradientContainer.purple({super.key})
+  const GradientContainer(this.color1, this.color2, {super.key});
+
+  const GradientContainer.purple({super.key})
       : color1 = Colors.deepPurple,
         color2 = Colors.indigo;
+
   final Color color1;
   final Color color2;
-  var activeDiceImage = 'assets/images/dice-2.png';
-
-  void rollDice() {
-    activeDiceImage = 'assets/images/dice-4.png';
-    print("Changing image");
-  }
 
   @override
   Widget build(context) {
@@ -32,35 +28,8 @@ class GradientContainer extends StatelessWidget {
           end: endAlignment,
         ),
       ),
-      child: Center(
-        child: Column(
-          // centered vertically
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Image.asset(
-              activeDiceImage,
-              width: 300,
-              height: 200,
-            ),
-            // he aternative lal padding
-            const SizedBox(
-              height: 20,
-            ),
-            TextButton(
-              onPressed: rollDice,
-              style: TextButton.styleFrom(
-                // padding: const EdgeInsets.only(
-                //   top: 20,
-                // ),
-                foregroundColor: Colors.red,
-                textStyle: const TextStyle(
-                  fontSize: 28,
-                ),
-              ),
-              child: const Text('Roll Dice'),
-            ),
-          ],
-        ),
+      child: const Center(
+        child: DiceRoller(),
       ),
     );
   }

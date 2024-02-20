@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 class DiceRoller extends StatefulWidget {
   const DiceRoller({super.key});
@@ -24,11 +25,15 @@ that other file will not be able to access
 this state class here.
  */
 class _DiceRollerState extends State<DiceRoller> {
-  var activeDiceImage = 'assets/images/dice-2.png';
+  // var activeDiceImage = 'assets/images/dice-2.png';
+  var currentDiceRoll = 2;
 
   void rollDice() {
+    // var diceRoll = Random().nextInt(6) + 1; //1 <> 5
+
     setState(() {
-      activeDiceImage = 'assets/images/dice-4.png';
+      currentDiceRoll = Random().nextInt(6) + 1; //1 <> 5
+      // activeDiceImage = 'assets/images/dice-$currentDiceRoll.png';
     });
   }
 
@@ -39,7 +44,8 @@ class _DiceRollerState extends State<DiceRoller> {
       mainAxisSize: MainAxisSize.min,
       children: [
         Image.asset(
-          activeDiceImage,
+          // activeDiceImage,
+          'assets/images/dice-$currentDiceRoll.png',
           width: 300,
           height: 200,
         ),
